@@ -29,29 +29,28 @@ template(name='navbarnav')
       a(href= "{{pathFor 'home'}}") Posts
     li
       a(href= "{{pathFor 'home'}}") New
-    li.dropdown
-        +notifications
-    li.dropdown
-        +dropdown1
+    +notifications
+    +dropdown1
 
 template(name='dropdown1')
-  if visible
-    a.dropdown-toggle(href='#', data-toggle='dropdown')
-      | Dropdown
-      strong.caret
-    ul.dropdown-menu
-      li
-        a(href='#') Action
-      li
-        a(href='#') Another action
-      li
-        a(href='#') Something else here
-      li.divider
-      li
-        a(href='#') Separated link
-      li.divider
-      li
-        a(href='#') One more separated link
+  if  visible
+    li.dropdown
+      a.dropdown-toggle(href='#', data-toggle='dropdown')
+        | Dropdown
+        strong.caret
+      ul.dropdown-menu
+        li
+          a(href='#') Action
+        li
+          a(href='#') Another action
+        li
+          a(href='#') Something else here
+        li.divider
+        li
+          a(href='#') Separated link
+        li.divider
+        li
+          a(href='#') One more separated link
 
 template(name='searchform')
   if visible
